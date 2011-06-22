@@ -1,0 +1,17 @@
+DESCRIPTION
+
+The {enter} handler of a state is executed when the user is first assigned to that state through the <a href="?category=flow+control&amp;topic=send">{send}</a> or <a href="?category=flow+control&amp;topic=register">{register}</a> modules, or by the router.
+
+
+PARAMETERS
+
+<i>none</i>
+
+
+EXAMPLES
+
+[{state}				
+	{enter}
+	...
+	{/enter}
+{/state}]

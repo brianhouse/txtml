@@ -1,0 +1,27 @@
+DESCRIPTION
+
+{if} tests a user variable against either a second user variable or a supplied value. If <i>relation</i> is supplied, {if} will compare the values as numbers according to the relation; otherwise they are tested for equivalency. If both <i>var2</i> and <i>value</i> are present, {if} will evaluate to true if either condition matches.
+
+
+PARAMETERS
+
+<i>var</i> - user variable to test
+<i>var2</i> (optionl) - second user variable
+<i>value</i> (optional) - supplied string
+<i>relation</i> (optional, =|>|<|>=|<=) - value relationship
+
+
+EXAMPLES
+
+[...
+	{if var="points" value="5"}
+		You have 5 points! You win!
+		{else}
+			You need 
+			{subtract value="5"}
+				{get var="points" /}
+			{/subtract}
+			more points to win.
+		{/else}
+	{/if}
+...]

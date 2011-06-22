@@ -1,0 +1,15 @@
+DESCRIPTION
+
+{get} returns the value of a user variable. If the variable does not exist, nothing is returned.
+
+
+PARAMETERS
+
+<i>var</i> - which variable to return
+	
+
+EXAMPLES
+
+[...	
+	Your name is {get var="name" /}.		
+...]

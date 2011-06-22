@@ -1,0 +1,38 @@
+DESCRIPTION
+
+The {time} handler of a user's current state is executed when the current time matches the conditions in the parameters, at the resolution of one minute. There may be more than one {time} handler per state.
+
+Missing parameters are assumed to be *, 0 in the case of <i>delay</i>, and false in the case of <i>repeat</i>.
+
+
+PARAMETERS
+
+<i>name</i> - (string) required identifier
+<i>delay</i> - (integer) number of seconds until the other conditions should be considered
+<i>repeat</i> - (boolean) if the handler should be executed more than once if the conditions match again
+<i>year</i> - (4-digits) handler is only executed in the given years
+<i>month</i> - (integer, 1-12) handler is only executed in the given months
+<i>date</i> - (integer, 1-31) handler is only executed on the given dates of the month
+<i>day</i> - (mon|tue|wed|thu|fri|sat|sun) handler is only executed on the given days of the week
+<i>hour</i> - (integer, 0-23) handler is only executed in the given hours
+<i>minute</i> - (integer, 0-59) handler is only executed on the given minutes
+
+
+EXAMPLES
+
+On the hour, every hour, on June 12, 2006
+[...
+	{state}
+		{time name="hourly" delay="0" repeat="true" year="2006" month="6" date="12" day="*" hour="*" minute="0"}
+			...
+		{/time}
+	{/state}
+...]					
+At the next noon -- unless it is sooner than one hour from when the user entered the state
+[...
+	{state}
+		{time name="next_noon" delay="60" repeat="false" year="*" month="*" date="*" day="*" hour="12" minute="0"}
+			...
+		{/time}
+	{/state}
+...]	

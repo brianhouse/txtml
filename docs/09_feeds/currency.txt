@@ -1,0 +1,15 @@
+DESCRIPTION
+
+Currency exchange rates.
+
+
+ATTRIBUTES
+
+<i>usd</i> - 1
+<i>euro</i> - <i>current rate</i>
+<i>pound</i> - <i>current rate</i>
+<i>cad</i> - <i>current rate</i>
+<i>yen</i> - <i>current rate</i>
+<i>rupee</i> - <i>current rate</i>
+<i>real</i> - <i>current rate</i>
+<i>yuan</i> - <i>current rate</i>	

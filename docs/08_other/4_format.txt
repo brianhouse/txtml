@@ -1,0 +1,21 @@
+DESCRIPTION
+
+<i>format</i> simply formats the contained string.
+
+
+PARAMETERS
+
+<i>format</i> (required) - the desired format
+<i>value</i> (optional) - the string to be formatted
+
+
+EXAMPLES
+
+[...	
+	{format format="uppercase" value="a string" /}
+...]
+[...	
+	{format format="uppercase"}
+		a string
+	{/format}
+...]

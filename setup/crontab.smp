@@ -1,0 +1,7 @@
+MAILTO=""
+* * * * * touch /Users/house/Sites/txtml/cron/crontest > /dev/null
+
+*/5 * * * * /usr/bin/php /Users/house/Sites/txtml/cron/cron_timer.php > /dev/null
+15 * * * * /usr/bin/php /Users/house/Sites/txtml/cron/cron_feeds.php > /dev/null
+
+0 12 * * 0 cd /Users/house/Sites/txtml/script/; ./choplog > /dev/null

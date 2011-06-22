@@ -1,0 +1,17 @@
+src/language/
+				antonyms
+				copulae
+				emoticons
+				junk
+				prepositions
+				pronouns
+				questions
+				salutations
+				
+src/language/synonyms/
+					bad
+					fine
+					good
+					no
+					yes
+					you

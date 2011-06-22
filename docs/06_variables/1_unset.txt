@@ -1,0 +1,15 @@
+DESCRIPTION
+
+{unset} removes a variable from a user.
+
+
+PARAMETERS
+
+<i>var</i> - which variable to set
+	
+
+EXAMPLES
+
+[...	
+	{unset var="name" /}		
+...]

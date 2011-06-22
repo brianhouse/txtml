@@ -1,0 +1,16 @@
+DESCRIPTION
+
+{get-feed} returns the value of a feed variable. If the variable does not exist, nothing is returned.
+
+
+PARAMETERS
+
+<i>name</i> - name of the feed
+<i>var</i> - which variable to return
+	
+
+EXAMPLES
+
+[...	
+	It is {get-feed name="weathernyc" var="temp" /} outside!
+...]

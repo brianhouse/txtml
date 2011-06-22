@@ -1,0 +1,26 @@
+DESCRIPTION
+
+{end} will break the execution of a state, so that no additional submodules are processed. {end} is implicit in <a href="?category=flow+control&amp;topic=quit">{quit}</a>, <a href="?category=flow+control&amp;topic=end">{end}</a>, <a href="?category=flow+control&amp;topic=send">{send}</a>, and <a href="?category=flow+control&amp;topic=send">{return}</a>.
+
+PARAMETERS
+
+<i>none</i>
+
+
+EXAMPLES
+
+{end} is useful for constructing 'case' statements:
+
+[...
+   {txt}
+	   {if pattern="A"}
+		   This text will be sent only if input is A
+		   {/end}
+	   {/if}
+	   {if pattern="B"}
+		   This text will be sent only if input is B
+		   {/end}
+	   {/if}
+	   This text will be sent otherwise
+   {/txt}
+...]

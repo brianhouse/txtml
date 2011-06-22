@@ -1,0 +1,8 @@
+DESCRIPTION
+
+The current tide for Battery Park, NYC.
+
+
+ATTRIBUTES
+
+<i>tide</i> - (low|rising|high|ebbing)

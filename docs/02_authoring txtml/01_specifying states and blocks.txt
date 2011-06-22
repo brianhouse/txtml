@@ -1,0 +1,13 @@
+At the first level following the root, a TXTML document contains one or more states and/or blocks. Each state or block has a name, which must be lowercase. This is specified as: 
+
+[{txtml version="1.2"}
+
+	{state name="state_1"}
+		... 
+	{/state}
+
+	{block name="block_1"}
+		... 
+	{/block}
+
+{/txtml}]

@@ -1,0 +1,15 @@
+DESCRIPTION
+
+{quit} removes a user and all references to that user from the system. {quit} will execute any assigned quit states. Additionally, it functions as a <a href="?category=flow+control&amp;topic=stop">{stop}</a>.
+
+
+PARAMETERS
+
+<i>none</i>
+
+
+EXAMPLES
+
+[...	
+	{quit /}		
+...]

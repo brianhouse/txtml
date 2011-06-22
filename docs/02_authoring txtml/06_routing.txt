@@ -1,0 +1,16 @@
+When the system receives a message from a user is not currently in the system, it compares the first token of the message against a list of valid keywords. Each of these keywords is linked to a state to which the user will be assigned. Please see the <a href="?category=admin%20interface&topic=router">router</a> section.
+
+Only states that are specified as 'start' states within TXTML can be linked to keywords. When a user is assigned to a start state, that states {enter} handler is executed. To specify a state as a start state, the start attribute is used: 
+
+[... 
+	{state name="state 1" start="true"} 
+		{enter} 
+			<i>executed on receipt of keyword from a new user</i>
+		{/enter} 
+	{/state} 
+...]
+If start is set to false or is missing, the state will not show up in the router interface. This serves purely as a convention to enforce intentional routing. 
+
+The content of the first text-message that is sent to the system will be saved in a user variable called "cta" ("call-to-action").
+
+In addition, if the incoming message is from a phone number, the area code will be cross-referenced with geographic areas typically associated with the codes. These are "loc_country", "loc_state", and "loc_description".

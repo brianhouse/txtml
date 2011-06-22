@@ -1,0 +1,14 @@
+DESCRIPTION
+
+Weather from weather.com for zip code 10004 (lower manhattan).
+
+
+ATTRIBUTES
+
+<i>temp</i> - (hot|warm|cool|cold|freezing - mild on error)
+<i>rain</i> - (true|false)
+<i>snow</i> - (true|false)
+<i>clouds</i> - (true|false)
+<i>wind</i> - (true|false)
+<i>haze</i> - (true|false)									
+

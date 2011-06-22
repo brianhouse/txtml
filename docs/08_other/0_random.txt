@@ -1,0 +1,23 @@
+DESCRIPTION
+
+{random} will randomly execute <i>one</i> of its submodules.
+
+
+PARAMETERS
+
+<i>none</i>
+	
+
+EXAMPLES
+
+[...
+	{txt}
+		The aliens on Mars are 
+		{random}
+			{content string="red" /}
+			{content string="green" /}
+			{content string="blue" /}
+		{/random}
+		.					
+	{/txt}
+...]

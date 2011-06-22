@@ -1,0 +1,46 @@
+DESCRIPTION
+
+The time of day, etc.
+
+
+
+ATTRIBUTES
+
+<i>daytime</i> -
+	early morning
+	morning
+	late morning
+	afternoon
+	late afternoon
+	evening
+	night
+
+<i>weekday</i> -
+	Monday
+	Tuesday
+	Wednesday
+	Thursday
+	Friday
+
+<i>month</i> -
+	January
+	February
+	March
+	April
+	May
+	June
+	July
+	August
+	September
+	October
+	November
+	December
+
+<i>season</i> -
+	spring
+	summer
+	autumn
+	winter
+
+<i>year</i> - 
+	<i>current year, 4 digits</i>

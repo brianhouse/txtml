@@ -1,0 +1,21 @@
+<b>IMAP</b>
+
+Users will communicate with your system via an email address. For more information on accessing email with SMS, try <a href="">here</a>.
+
+To use IMAP, simply make sure the settings in config.xml match your email provider, and activate the cron_email.php on a cron running every five minutes (see setup/crontab.smp for an example).
+
+
+<b>BLUEPHONEELITE 2</b>
+
+Users will communicate with your system via a standard phone and phone number. Once BPE2 is installed on your system, is running, and is paired with your phone, go to the BPE2 preference menu. Under triggers, add an "Event Reactor" --> "Notfication" --> "AppleScript Reactor". When asked to select a file, choose txtml/applescript/bluephone2_receive.scpt
+
+
+<b>AGGREGATOR</b>
+
+Users will communicate with your system via a shortcode. This method requires a relationship with a SMS aggregator (this is several hundred dollars per month at a minimum, unlikely to be a hobbyist option).
+
+Most aggregators operate with a an HTTP API that makes a request the TXTML-interpreter when a message is received. Instruct the aggregator to point these requests to http://<i>yourinstallationpath</i>/receive/?service=<i>aggregatorname</i>. Use the suggested htaccess file to change this to http://<i>yourinstallationpath</i>/receive/<i>aggregatorname</i>.
+
+At the moment, a "translator" (API interface) has been written only for <a href="http://www.mxtelecom.com">MX Telecom</a>. <a href="http://mblox.com">mBlox</a> is coming soon.
+
+Please see <a href="category=extending">extending</a> for information on how to add translators.

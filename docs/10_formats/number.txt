@@ -1,0 +1,3 @@
+DESCRIPTION
+
+Stores input as a number. Converts english number names.

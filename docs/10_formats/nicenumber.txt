@@ -1,0 +1,3 @@
+DESCRIPTION
+
+Identical to <a href="?category=formats&topic=number">number</a>, but adds commas to big numbers, like 1,000,000.

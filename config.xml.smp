@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<settings>
+	<db>
+		<host>localhost</host>
+		<username>root</username>
+		<password></password>
+		<database>vt</database>
+		<verbose>false</verbose>
+	</db>	
+	<twilio>
+		<sid>AAAAAAAAAA</sid>
+		<token>BBBBBBBBBBBBBBB</token>
+		<token>NNNNNNNNNNNNN</token>		
+	</twilio>
+	<cron_cycle>5</cron_cycle>
+	<api>http://localhost/txtml/public/api/</api>	
+</settings>

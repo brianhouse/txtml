@@ -1,0 +1,19 @@
+DESCRIPTION
+
+{if-set} returns true only if the specified variable has been defined.
+
+
+PARAMETERS
+
+<i>var</i> - variable to test
+	
+
+EXAMPLES
+
+[...	
+	{if-set var="name"}		
+		{txt}
+			Well hello <get var="name" />!
+		{/txt}
+	{/if-set}
+...]

@@ -1,0 +1,5 @@
+XML documents always consist of hierarchically nested tags, and TXTML is executed as a depth-first traversal of this tree-structure, beginning at the level of the appropriate handler. For example, when a message is received from a user, the modules nested inside the {input} handler of the bead that user is assigned to will be recursively executed. 
+
+Each element performs some action and in turn will execute any child elements (known as submodules) according to the outcome. Execution of a bead ends when either all the modules in a handler have been executed or an {send}, {return}, {end}, or {quit} module is encountered. 
+
+The only possible return value of a module is a string of text. A module will concatenate any strings returned by its submodules and return the result. The exeception to this rule is the {txt} module, which instead of returning the string will send it to the current user as a text-message. 

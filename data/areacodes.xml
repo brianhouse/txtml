@@ -1,0 +1,353 @@
+201	NJ	US	New Jersey
+202	DC	US	Washington DC
+203	CT	US	Connecticut
+204	MB	CA	Manitoba
+205	AL	US	Alabama
+206	WA	US	Seattle
+207	ME	US	Maine
+208	ID	US	Idaho
+209	CA	US	California
+210	TX	US	San Antonio
+212	NY	US	New York City
+213	CA	US	LA
+214	TX	US	Dallas
+215	PA	US	Philadelphia
+216	OH	US	Cleveland
+217	IL	US	Illinois
+218	MN	US	Minnesota
+219	IN	US	Indiana
+224	IL	US	Illinois
+225	LA	US	Louisiana
+226	ON	CA	Ontario
+228	MS	US	Mississippi
+229	GA	US	Georgia
+231	MI	US	Michigan
+234	OH	US	Ohio
+236	VA	US	Virginia
+239	FL	US	Florida
+240	MD	US	Maryland
+242	--	US	Bahamas
+246	--	US	Barbados
+248	MI	US	Michigan
+250	BC	CA	British Columbia
+251	AL	US	Alabama
+252	NC	US	North Carolina
+253	WA	US	Washington State
+254	TX	US	Texas
+256	AL	US	Alabama
+260	IN	US	Indiana
+262	WI	US	Wisconsin
+264	--	US	Anguilla
+267	PA	US	Philadelphia
+268	--	US	Antigua and Barbuda
+269	MI	US	Michigan
+270	KY	US	Kentucky
+276	VA	US	Virgina
+278	MI	US	Michigan
+281	TX	US	Houston
+283	OH	US	Cincinnati
+284	--	US	British Virgin Islands
+289	ON	CA	Ontario
+301	MD	US	Maryland
+302	DE	US	Delaware
+303	CO	US	Denver
+304	WV	US	West Virginia
+305	FL	US	Miami
+306	SK	CA	Saskatchewan
+307	WY	US	Wyoming
+308	NE	US	Nebraska
+309	IL	US	Illinois
+310	CA	US	LA
+312	IL	US	Chicago
+313	MI	US	Detroit
+314	MO	US	St Louis
+315	NY	US	New York
+316	KS	US	Kansas
+317	IN	US	Indianapolis
+318	LA	US	Louisiana
+319	IA	US	Iowa
+320	MN	US	Minnesota
+321	FL	US	Florida
+323	CA	US	LA
+325	TX	US	Texas
+330	OH	US	Ohio
+331	IL	US	Illinois
+334	AL	US	Alabama
+336	NC	US	North Carolina
+337	LA	US	Louisiana
+339	MA	US	Massachusetts
+340	VI	US	Virgin Islands
+341	CA	US	California
+345	--	US	Cayman Islands
+347	NY	US	New York City
+351	MA	US	Massachusetts
+352	FL	US	Florida
+360	WA	US	Washington State
+361	TX	US	Texas
+369	CA	US	California
+380	OH	US	Ohio
+385	UT	US	Salt Lake City
+386	FL	US	Florida
+401	RI	US	Rhode Island
+402	NE	US	Nebraska
+403	AB	US	Alberta
+404	GA	US	Atlanta
+405	OK	US	Oklahoma
+406	MT	US	Montana
+407	FL	US	Orlando
+408	CA	US	California
+409	TX	US	Texas
+410	MD	US	Maryland
+412	PA	US	Pittsburgh
+413	MA	US	Springfield
+414	WI	US	Wisconsin
+415	CA	US	Marin County
+416	ON	CA	Toronto
+417	MO	US	Springfield
+418	QC	CA	Quebec
+419	OH	US	Ohio
+423	TN	US	Tennessee
+424	CA	US	LA
+425	WA	US	Washington
+430	TX	US	Texas
+432	TX	US	Texas
+434	VA	US	Virginia
+435	UT	US	Utah
+438	QC	CA	Montreal
+440	OH	US	Cleveland
+441	--	US	Bermuda
+442	CA	US	San Diego
+443	MD	US	Baltimore
+450	QC	CA	Montreal
+464	IL	US	Chicago
+469	TX	US	Dallas
+470	GA	US	Atlanta
+473	--	US	Grenada
+475	CT	US	New Haven
+478	GA	US	Georgia
+479	AR	US	Arkansas
+480	AZ	US	Phoenix
+484	PA	US	Pennsylvania
+501	AR	US	Little Rock
+502	KY	US	Louisville
+503	OR	US	Oregon
+504	LA	US	New Orleans
+505	NM	US	New Mexico
+506	NB	CA	New Brunswick
+507	MN	US	Minnesota
+508	MA	US	Massachusetts
+509	WA	US	Washington State
+510	CA	US	Oakland
+512	TX	US	Austin
+513	OH	US	Cincinnati
+514	QC	CA	Montreal
+515	IA	US	Des Moines
+516	NY	US	Long Island
+517	MI	US	Lansing
+518	NY	US	Albany
+519	ON	CA	Windsor
+520	AZ	US	Tucson
+530	CA	US	California
+540	VA	US	Virginia
+541	OR	US	Oregon
+551	NJ	US	New Jersey
+557	MO	US	St Louis
+559	CA	US	Fresno
+561	FL	US	Florida
+562	CA	US	Long Beach
+563	IA	US	Iowa
+564	WA	US	Washington State
+567	OH	US	Toledo
+570	PA	US	Pennsylvania
+571	VA	US	Virginia
+573	MO	US	Missouri
+574	IN	US	Indiana
+575	NM	US	New Mexico
+580	OK	US	Oklahoma
+585	NY	US	Rochester
+586	MI	US	Michigan
+601	MS	US	Mississippi
+602	AZ	US	Phoenix
+603	NH	US	New Hampshire
+604	BC	CA	Vancouver
+605	SD	US	South Dakota
+606	KY	US	Kentucky
+607	NY	US	New York State
+608	WI	US	Madison
+609	NJ	US	New Jersey
+610	PA	US	Pennsylvania
+612	MN	US	Minneapolis
+613	ON	CA	Ottawa
+614	OH	US	Columbus
+615	TN	US	Nashville
+616	MI	US	Michigan
+617	MA	US	Boston
+618	IL	US	Illinois
+619	CA	US	San Diego
+620	KS	US	Wichita
+623	AZ	US	Phoenix
+626	CA	US	Pasadena
+630	IL	US	Chicago
+631	NY	US	New York
+636	MO	US	St. Louis
+641	IA	US	Iowa
+646	NY	US	New York City
+647	ON	CA	Toronto
+649	--	US	Turks and Caicos Islands
+650	CA	US	Northern California
+651	MN	US	Minnesota
+660	MO	US	Missouri
+661	CA	US	Southern California
+662	MS	US	Mississippi
+664	--	US	Montserrat
+669	CA	US	San Jose
+670	MP	US	Mariana Islands
+671	GU	US	Guam
+678	GA	US	Atlanta
+679	MI	US	Michigan
+682	TX	US	Texas
+684	--	US	American Samoa
+689	FL	US	Orlando
+701	ND	US	North Dakota
+702	NV	US	Nevada
+703	VA	US	Virginia
+704	NC	US	Charlotte
+705	ON	CA	Ontario
+706	GA	US	Georgia
+707	CA	US	Norhtern California
+708	IL	US	Chicago
+709	NL	CA	Newfoundland
+712	IA	US	Iowa
+713	TX	US	Houston
+714	CA	US	Orange County
+715	WI	US	Wisconsin
+716	NY	US	Buffalo
+717	PA	US	Harrisburg
+718	NY	US	New York City
+719	CO	US	Colorado
+720	CO	US	Denver
+724	PA	US	Pittsburgh
+727	FL	US	Florida
+731	TN	US	Memphis
+732	NJ	US	New Jersey
+734	MI	US	Ann Arbor
+737	TX	US	Austin
+740	OH	US	Columbus
+747	CA	US	LA
+754	FL	US	Ft. Lauderdale
+757	VA	US	Norfolk
+758	--	US	St. Lucia
+760	CA	US	San Diego
+762	GA	US	Columbus
+763	MN	US	Minneapolis
+764	CA	US	California
+765	IN	US	Indianapolis
+767	--	US	Dominica
+769	MS	US	Meridian
+770	GA	US	Atlanta
+772	FL	US	St. Lucie
+773	IL	US	Chicago
+774	MA	US	Framingham
+775	NV	US	Reno
+778	BC	CA	Vancouver
+779	IL	US	Rockford
+780	AB	CA	Alberta
+781	MA	US	Boston
+784	--	US	St. Vincent
+785	KS	US	Topeka
+786	FL	US	Miami
+787	PR	US	Puerto Rico
+801	UT	US	Salt Lake City Metro
+802	VT	US	Vermont
+803	SC	US	Columbia
+804	VA	US	Richmond
+805	CA	US	Santa Barbara
+806	TX	US	Amarillo
+807	ON	CA	Ontario
+808	HI	US	Hawaii
+809	--	US	Dominican Republic
+810	MI	US	Flint
+811	--	--	Anywhere
+812	IN	US	Cincinnati
+813	FL	US	Tampa
+814	PA	US	Erie
+815	IL	US	Rockford
+816	MO	US	Kansas City
+817	TX	US	Fort Worth
+818	CA	US	LA
+819	QC	US	Trois Rivieres
+828	NC	US	Asheville
+829	--	US	Dominican Republic
+830	TX	US	San Antonio
+831	CA	US	Santa Cruz
+832	TX	US	Houston
+835	PA	US	Allentown
+843	SC	US	Charleston
+845	NY	US	Nyack
+847	IL	US	Chicago
+848	NJ	US	New Brunswick
+850	FL	US	Pensacola
+856	NJ	US	Camden
+857	MA	US	Boston
+858	CA	US	San Diego
+859	KY	US	Lexington
+860	CT	US	Fairfield
+862	NJ	US	Newark
+863	FL	US	Lakeland
+864	SC	US	Greenville
+865	TN	US	Knoxville
+867	YT	CA	Northern Canada
+868	--	US	Trinidad and Tobago
+869	--	US	St. Kitts and Nevis
+870	AR	US	Jonesboro
+872	IL	US	Chicago
+876	--	US	Jamaica
+878	PA	US	Pittsburgh
+901	TN	US	Memphis
+902	NS	CA	Prince Edward Island
+903	TX	US	Tyler
+904	FL	US	Jacksonville
+905	ON	CA	Toronto
+906	MI	US	Escanaba
+907	AK	US	Anchorage
+908	NJ	US	Elizabeth
+909	CA	US	Inland empire
+910	NC	US	Fayetteville
+912	GA	US	Savannah
+913	KS	US	Kansas City
+914	NY	US	Westchester
+915	TX	US	El Paso
+916	CA	US	Sacramento
+917	NY	US	New York City
+918	OK	US	Tulsa
+919	NC	US	Raleigh
+920	WI	US	Appleton
+925	CA	US	Antioch
+927	FL	US	Orlando
+928	AZ	US	Flagstaff
+931	TN	US	Nashville
+935	CA	US	San Diego
+936	TX	US	Conroe
+937	OH	US	Dayton
+939	PR	US	San Juan
+940	TX	US	Denton
+941	FL	US	Sarasota
+947	MI	US	Oakland County
+949	CA	US	Orange County
+951	CA	US	Riverside County
+952	MN	US	Minneapolis
+954	FL	US	Ft. Lauderdale
+956	TX	US	Laredo
+957	NM	US	New Mexico
+959	CT	US	Hartford
+970	CO	US	Boulder
+971	OR	US	Portland
+972	TX	US	Dallas
+973	NJ	US	Newark
+975	MO	US	Kansas City
+978	MA	US	Boston
+979	TX	US	Bay City
+980	NC	US	North Carolina
+984	NC	US	Raleigh
+985	LA	US	Covington
+989	MI	US	Mt Pleasant

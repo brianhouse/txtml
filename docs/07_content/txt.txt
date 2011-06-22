@@ -1,0 +1,19 @@
+DESCRIPTION
+
+{txt} sends an SMS to a user or users with the content contained in its submodules or in the <i>string</i> parameter if provided.
+
+Note that return characters and tabs are ignored in TXTML; however, spaces are retained in the message.
+
+
+PARAMETERS
+
+<i>string</i> - content (optional)
+
+
+EXAMPLES
+
+[...				
+	{txt}
+		<i>any text or return values in submodules of {txt} in this space are concatenated and sent as an SMS to the user</i>
+	{/txt}
+...]

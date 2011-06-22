@@ -1,0 +1,17 @@
+DESCRIPTION
+
+The {input} handler of a user's current state is executed when an SMS is received from that user.
+
+
+PARAMETERS
+
+<i>none</i>
+
+
+EXAMPLES
+
+[{state}				
+	{input}
+		...
+	{/input}
+{/state}]

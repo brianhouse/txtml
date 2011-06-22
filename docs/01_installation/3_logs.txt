@@ -1,0 +1,1 @@
+log.log contains a stream of the interpreter's operations. Set the database to 'verbose' to include MySQL calls. script/choplog will clear the log file, which can be done according to a schedule if run from a cron.

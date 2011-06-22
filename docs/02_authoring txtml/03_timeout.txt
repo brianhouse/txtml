@@ -1,0 +1,25 @@
+<i>timeout</i> is another optional parameter that can be specified either in the header or in an individual state. timeout is simply the length of time (in minutes) that a user may stay in a state until they are forgotten. timeout is basically a safeguard against keeping idle users in the system past the point where the intended context is relevant. A primary example is an opt-in situation where a user txts the system and is asked the question "Do you want to play this game?" but does not respond for an hour. An hour later, the system should restate the question rather than assume an incoming message is a response. 
+
+[{txtml version="1.6" collection="docs}
+
+	{state name="state_1" timeout="60"}
+		...
+	{/state} 
+
+	{state name="state_2" timeout="60"}
+		...
+	{/state} 
+	
+{/txtml}]
+is equivalent to
+[{txtml version="1.6" collection="docs" timeout="60"}
+
+	{state name="state_1"}
+		...
+	{/state} 
+
+	{state name="state_2"}
+		...
+	{/state} 
+
+{/txtml}]

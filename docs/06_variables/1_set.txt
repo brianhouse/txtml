@@ -1,0 +1,24 @@
+DESCRIPTION
+
+{set} assigns a variable to the user and formats the string if a format is provided.
+
+Variables may only consist of numbers, letters, and the underscore.
+
+
+PARAMETERS
+
+<i>var</i> - which variable to set
+<i>value</i> - what to set the variable to (optional; input by default)
+<i>format</i> - how to filter the value (optional; <a href="?category=formats&amp;topic=normal">normal</a> by default)
+	
+
+EXAMPLES
+
+[...	
+	{set var="name" format="firstname" /}		
+...]
+[...	
+	{set var="name" format="firstname"}
+		a string or other modules
+	{/set}		
+...]

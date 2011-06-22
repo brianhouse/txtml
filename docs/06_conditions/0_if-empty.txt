@@ -1,0 +1,19 @@
+DESCRIPTION
+
+{if-empty} returns true only if the specified variable has not been defined.
+
+
+PARAMETERS
+
+<i>var</i> - variable to test
+	
+
+EXAMPLES
+
+[...	
+	{if-empty var="name"}		
+		{txt}
+			What's your name?
+		{/txt}
+	{/if-empty}
+...]

@@ -1,0 +1,14 @@
+<ul><li>A *nix environment, including OS X</li>
+<li>Permission to run cronjobs</li>
+<li>PHP version 5.2.* or higher compiled with the IMAP, SimpleXML, and mysql modules enabled<br /><br />The TXTML-interpreter uses both commandline PHP, via cronjobs, and PHP as an Apache module or attached to some other webserver</li>
+<li>MySQL 5.* or higher</li>
+</ul>
+<b>Plus one (or more) of the following:</b>
+<ul>
+<li>An IMAP email account</li>
+<li>An account with an SMS aggregator that has an HTTP API</li>
+<li>OS X, a Bluetooth-enabled phone, and <a href="http://mirasoftware.com/BPE2/">BluePhoneElite 2</a></li>
+<li>A PC, a phone connected via serial cable, and <a href="http://smslib.org/">SMSlib</a></li>
+</ul>
+
+This package is highly dependent on the BH library which should be included in the distribution. The BH library needs to be in PHP's include path. Recommended PHP settings are included in the htaccess.smp.

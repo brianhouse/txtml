@@ -1,0 +1,25 @@
+DESCRIPTION
+
+{content} simply specifies text content which it returns to its parent modules, and ultimately to <a href="?category=content&topic=txt">{txt}</a>. It is the equivalent of text within the body of a module. It is useful when using <a href="?category=other&amp;topic=random">{random}</a>.
+
+
+PARAMETERS
+
+<i>string</i> - text which is returned
+
+
+EXAMPLES
+
+[...	
+	{txt}					
+		{content string="Hello World!" /}
+	{/txt}
+...]
+
+is equivalent to
+
+[...	
+	{txt}					
+		Hello World!
+	{/txt}
+...]

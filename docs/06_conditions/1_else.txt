@@ -1,0 +1,19 @@
+DESCRIPTION
+
+{else} if an "if" condition in {if-X} evaluates to false, any submodules with an {else} submodule will be executed. {else} must be the last submodule of {if-X}, and there can be only one {else} module per {if-X}
+
+
+PARAMETERS
+
+<i>none</i>
+
+
+EXAMPLES
+
+[...	
+	{if-input value="impossible}
+		{else}
+			<i>executed if condition is false</i>
+		{/else}
+	{/if-input}
+...]

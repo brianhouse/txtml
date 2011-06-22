@@ -1,0 +1,15 @@
+DESCRIPTION
+
+The <i>stopwatch</i> parameter in <a href="?category=event+handlers&amp;topic=time">{time}</a> is measured from the last time this module has be executed for any given user.
+
+
+PARAMETERS
+
+<i>none</i>
+
+
+EXAMPLES
+
+[...	
+	{stopwatch /}					
+...]

@@ -1,0 +1,113 @@
+body {
+	background-color:#21435c;
+	background-image:url('img/fuckingflower3.jpg');
+	background-repeat:no-repeat;
+	margin:75px;
+}
+
+div {
+	position:relative;
+	color:#333;
+	font:11px arial, sans-serif;	
+	padding:10px;				
+	background-color:#fff;
+}
+
+div.main {
+	margin:auto;
+	width:700px;
+	border:1px solid #000;
+	padding:0px;
+}
+
+div.top {
+	border-bottom:1px solid #000;
+}
+
+div.full {
+	clear:both;
+	border:none;
+}
+
+div.menu {
+	float:left;
+	width:150px; 
+	border-right:1px solid #000;
+}
+
+div.content {
+	float:right;
+	width:509px;
+}
+
+div.bottom {
+	border-top:1px solid #000;
+	clear:both;
+}
+
+div.bead {
+	margin:0px;
+	padding:0px;
+	margin-bottom:30px;
+}
+
+hr {
+	height:1px;
+	color:#999;
+	border:none;
+	background-color:#999;
+}
+
+input {
+	font:10px arial, sans-serif;
+}
+
+td {
+	vertical-align:top;
+	text-align:left;
+}
+
+a {
+	color:#333;
+	border-bottom:1px dotted #666;
+	text-decoration:none;
+}
+
+a:hover {
+	border:none;
+	text-decoration:underline;
+}
+
+.menu_category {
+	font:bold 12px arial, sans-serif;	
+}
+
+.menu_topic {
+	
+}
+
+.topic {
+	text-align:left;
+	padding: 0px;
+	margin-top:1px;
+}
+
+.index {
+	font:bold 10px arial, sans-serif;	
+	text-transform:uppercase;	
+}
+
+.title {
+	font:bold 16px arial, sans-serif;
+	text-transform:uppercase;
+}
+
+.code {
+	font:10px monospace;
+	background:#ddd;
+	padding:5px;
+}
+
+.alert {
+	color:red;
+}

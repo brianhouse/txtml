@@ -1,0 +1,6 @@
+#!
+
+cd ..
+rm log.log
+touch log.log
+chmod a+w log.log

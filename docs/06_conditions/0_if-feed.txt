@@ -1,0 +1,39 @@
+DESCRIPTION
+
+{if-feed} tests a feed variable against either a user variable or a supplied value. If <i>relation</i> is supplied, {if-feed} will compare the values as numbers according to the relation; otherwise they are tested for equivalency. If both <i>var2</i> and <i>value</i> are present, {if-feed} will evaluate to true if either condition matches.
+
+
+PARAMETERS
+
+<i>name</i> - feed name
+<i>var</i> - feed variable to test
+<i>var2</i> (optionl) - user variable
+<i>value</i> (optional) - supplied string
+<i>relation</i> (optional, =|>|<|>=|<=) - value relationship
+
+
+EXAMPLES
+
+[...				
+	{if-feed name="weathernyc" var="rain" value="true"}
+		{txt}I feel like a wet dog.{/txt}
+		{end /}
+	{/if-feed}
+	{if-feed name="weathernyc" var="snow" value="true"}
+		{txt}I feel like a snowman.{/txt}
+		{end /}
+	{/if-feed}
+	{if-feed name="weathernyc" var="clouds" value="true"}
+		{txt}Not much of a sun today.{/txt}
+		{end /}
+	{/if-feed}
+	{if-feed name="weathernyc" var="wind" value="true"}
+		{txt}Dont let the wind blow you over...{/txt}
+		{end /}
+	{/if-feed}
+	{if-feed name="weathernyc" var="haze" value="true"}
+		{txt}Just a lazy hazy day.{/txt}
+		{end /}
+	{/if-feed}
+	{txt}What a {get name="weathernyc" var="temp" /} day!{/txt}
+...]

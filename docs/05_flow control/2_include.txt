@@ -1,0 +1,26 @@
+DESCRIPTION
+
+{include} substitutes a block of code defined elsewhere for its execution, in order for that block to be shared among multiple states.
+
+
+PARAMETERS
+
+<i>block</i> - block to be included
+
+
+EXAMPLES
+
+[...
+	{state name="example"}
+		{input}
+			{include block="reusable_code" /}					
+			{txt}That's not the magic word!{/txt}
+		{/input}
+	{/state}
+
+	{block name="reusable_code"}
+		{if-input value="magic word"}
+			{send state="elsewhere" /}
+		{/if-input}
+	{/block}
+...]

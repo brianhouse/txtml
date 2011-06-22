@@ -1,0 +1,56 @@
+DESCRIPTION
+
+{if-input} tests the against either a pattern, a user variable, or a supplied value. If <i>relation</i> is supplied, {if-input} will compare the values as numbers according to the relation (except with <i>pattern</i>, on which <i>relation</i> has no effect); otherwise they are tested for equivalency. If more than one of <i>pattern</i>, <i>var</i>, or <i>value</i> are present, {if} will evaluate to true if any condition matches.
+
+If {if-input} is evaluated outside of an <a href="?category=event+handlers&topic=input">{input}</a> handler, it will return false.
+
+
+PARAMETERS
+
+<i>pattern</i> (optional) - list of pattern tokens
+<i>var</i> (optional) - user variable
+<i>value</i> (optional) - supplied string
+<i>relation</i> (optional, =|&gt;|&lt;|&gt;=|&lt;=) - value relationship
+
+
+PATTERN - NATURAL LANGUAGE PROCESSING
+
+{if-input}'s <i>pattern</i> parameter invokes a library of rudimental natural language processing functions. <i>pattern</i> takes a list of tokens, separated by commas, such as <span style="font-family:monospace; font-size:90%;">pattern="token1,token2"</span>. For each token specified, {if-input} will search the user's input for a matching token. Prior to the comparison, several preprocessing steps are taken on the input:
+</p><ul><li>lowercased</li><li>emoticons converted to words (eg, ':-)' converted to 'happy')</li><li>possessives eliminated</i><li>punctuation removed or substituted by words (eg, '+' converted to 'and')</li><li>natural language numbers converted to numeric values (eg, 'forty' converted to '40)</li><li>negated values converted to an antonym, if available (eg, 'not good' converted to 'bad')</li></ul><p>Additionally, a token does not have to match exactly, but within a given tolerance, as described by the <a href="http://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein</a> algorithm. In this case, the tolerance is one-third the length of the token.
+
+No punctuation maye be used with <i>pattern</i>; however, there are three signifiers for special meaning:
+
+</p><ul><li>! used in front of a token will cause {if-input} to return true only if the token is <i>not</i> found</li><li>* used in front of a token will compare the input to not only the token but a list of its synonyms (eg, <span style="font-family:monospace; font-size:90%;">pattern="*yes"</span> matches against "yeah", "ok", "absolutely", etc). Synonyms are defined in the <a href="category=extending&topic=language%20dictionaries">language dictionaries</a>.</li><li>? used as a token will match any phrase that is in the form of a question (eg, <span style="font-family:monospace; font-size:90%;">pattern="?"</span>)</li></ul>
+
+Finally, tokens may be compound, consisting of two or more words separated by the + symbol. With compound tokens, all of the composite terms must match somewhere in the input. ?, *, and ! may be used freely within compounds.
+
+Please see <a href="?category=extending">extending</a> for more information on langauge lists.
+
+
+EXAMPLES
+
+[{state name="yanks"}
+	{enter}
+		{txt}
+			Are you a Yankees fan?
+		{/txt}
+	{/enter}
+	{input}
+		{if-input pattern="*yes"}
+			{send state="yes" /}
+			{else}
+				{send state="no" /}
+			{/else}
+		{/if-input}
+	{/input}
+{/state}]
+[...
+	{input}
+		{if-input pattern="rock+roll"}
+			<i>"rock and roll" matches. "rock" or "roll" does not.</i>
+		{if-input}
+		{if-input pattern="rock,roll"}
+			<i>"rock and roll" matches. so does "rock", and also "roll".</i>
+		{/if-input}
+	{/input}
+...]

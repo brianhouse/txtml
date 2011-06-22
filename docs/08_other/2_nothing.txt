@@ -1,0 +1,15 @@
+DESCRIPTION
+
+Does nothing!
+
+
+PARAMETERS
+
+<i>none</i>
+
+
+EXAMPLES
+
+[...
+	{nothing /}
+...]

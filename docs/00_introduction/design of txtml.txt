@@ -1,0 +1,5 @@
+TXTML is intended as a domain-specific markup for txt-messaging applications, and is inspired by <a href="">INFORM</a>, <a href="">AIML</a>, and <a href="">VXML</a>. It is an XML-variant, and is within the class of context-free languages (I think). In essence, it describes an automaton with a defined set of states, events, and transition functions; a collection of these states defines the set of potential interactions for a user. The XML-Schema can be considered the formal definition of the language; slightly more transparent descriptions are given in the pages below.
+
+The TXTML-interpreter offered here is a lightweight implementation of TXTML as a collection of PHP5 scripts, built with an eye toward object-orientation and recursion.
+
+<i>More introduction goes here.</i>

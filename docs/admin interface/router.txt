@@ -1,0 +1,1 @@
+If the user is not recognized, and the keyword does not match any keyword specified in the router, the user will be assigned to the default application. If no default is defined, the system will not respond.

@@ -1,0 +1,9 @@
+<ol>
+<li>Within the extracted distribution folder at a command prompt, type ./setup/init</li>
+<li>Create a mysql database with any name. If you don't know how to do this, try <a href="http://dev.mysql.com/doc/refman/5.0/en/tutorial.html">here</a></li>
+<li>Load the schema into your database with: mysql -h YOURHOST -u YOURUSERRNAME -p'YOURPASSWORD' YOURDATABASE &lt; setup/tables.sql</li>
+<li>Edit config.xml to match your database and imap (optional) configurations.</li>
+<li>View setup/crontab.smp. Type crontab -e and install a crontab based on this file with the appropriate paths for your system.</li>
+<li>Make the public/ folder web accessible, preferrably as a root directory (the install folder should not be visible to the web). The administration website will be available at this url.</li>
+<li>The &lt;api&gt; config setting should be set to http://<i>yourinstallationpath</i>/api/.</li>
+</ol>

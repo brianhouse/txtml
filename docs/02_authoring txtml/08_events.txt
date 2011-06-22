@@ -1,0 +1,18 @@
+{enter}, {exit}, {input}, and {time} are event handler types. A state may contain at most one of each type of handler, and handlers are the only type of element that can exist as children of the state element. 
+
+[...
+	{state name="example"} 
+		{enter} 
+			<i>executed when a user first enters this state</i>
+		{/enter} 
+		{input} 
+			<i>executed when a user sends a message to the system</i>
+		{/input} 
+		{time} 
+			<i>executed every minute</i>
+		{/time} 
+		{exit}
+			<i>executed when a user is assigned to a different state, before the execution of that state's {enter} handler</i>
+		{exit}
+	{/state} 
+...]

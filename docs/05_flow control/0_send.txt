@@ -1,0 +1,15 @@
+DESCRIPTION
+
+{send} assigns the user to a new state, and executes any <a href="?category=handlers&amp;topic=enter">{enter}</a> handlers in that state. Additionally, it functions as an <a href="?category=flow+control&amp;topic=end">{end}</a>. If the state name provided is not a valid state, {send} functions equivalently to {end}.
+
+
+PARAMETERS
+
+<i>state</i> - state name
+
+
+EXAMPLES
+
+[...	
+	{send state="next_state_name" /}		
+...]

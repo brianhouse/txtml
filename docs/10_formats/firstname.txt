@@ -1,0 +1,5 @@
+DESCRIPTION
+
+Captalizes the first letter of the first token in the input and lowercases the rest, discarding other tokens.
+
+Part-of-speech filtering / "name" filtering

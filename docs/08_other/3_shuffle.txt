@@ -1,0 +1,20 @@
+DESCRIPTION
+
+<i>shuffle</i> simply re-arranges all characters within a string, and returns the result.
+
+
+PARAMETERS
+
+<i>value</i> (optional) - the string to be shuffled
+
+
+EXAMPLES
+
+[...	
+	{shuffle value="a string" /}
+...]
+[...
+	{shuffle}
+		a string
+	{/shuffle}
+...]

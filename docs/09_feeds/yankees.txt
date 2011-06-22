@@ -1,0 +1,12 @@
+DESCRIPTION
+
+The result of the most recent yankees game.
+
+
+ATTRIBUTES
+
+<i>opponent</i> - <i>oppponent name</i>
+<i>won</i> - (true|false)
+<i>when</i> - (last night|two nights ago|the other night|last season)
+<i>game</i> - (true|false)			
+

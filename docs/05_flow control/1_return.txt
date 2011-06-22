@@ -1,0 +1,15 @@
+DESCRIPTION
+
+{returns} assigns the user to the previous state, without executing either the <a href="?category=handlers&amp;topic=exit">{exit}</a> or <a href="?category=handlers&amp;topic=enter">{enter}</a> handlers in either state. Additionally, it functions as a <a href="?category=flow+control&amp;topic=end">{end}</a>. If there is no previous state, {send} functions equivalently to {end}.
+
+
+PARAMETERS
+
+<i>none</i>
+
+
+EXAMPLES
+
+[...	
+	{return /}		
+...]

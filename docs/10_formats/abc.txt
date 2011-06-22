@@ -1,0 +1,5 @@
+DESCRIPTION
+
+Restricts input to "A", "B", "C" or "-".
+
+Part-of-speech filtering.

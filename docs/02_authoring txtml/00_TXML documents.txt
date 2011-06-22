@@ -1,0 +1,8 @@
+A subset of XML, TXTML is subject to all of the standard rules of XML well-formedness. The language is specified in an XML-Schema file, or XSD, against which all TXTML files are validated (see appendix B). A fundamental feature of Ludmilla is the web-based validator, which compares a TXTML document against the rules of the TXTML XSD, and displays any discrepancies. The XML root element of a TXTML document is simply: 
+
+[{txtml version="1.2"}
+... 
+{/txtml}]
+All the attributes of the txtml element are together called the header, which in this example consists only of the TXTML version number, the only required attribute. A TXTML document should be saved with the .xml suffix in order to leverage the built-in well-formedness checking of software such as browsers. 
+
+Only letters, numbers, and the following set of punctuation may be used in TXTML: @_!#%*+,-.:;=?$)(/ ' Note that double quotes are not allowed. 

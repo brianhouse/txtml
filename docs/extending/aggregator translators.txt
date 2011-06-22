@@ -1,0 +1,7 @@
+Translators serve the purpose of translating between an SMS aggregator's API and the TXTML messaging engine, and so must be custom written for each aggregator. A basic assumption is that the aggregator is providing an HTTP interface with separate functions for sending and receiving individual messages.
+
+Translators extend the Translator class, and live in the src/translators folder. The <i>receive</i> function must write an XML file into the system inbox in the standard format (for now, see one of the existing translators for this) with the information typically delivered in the form of GET variables from the aggregator. Likewise, the <i>send</i> function must translate from the standard XML system format to whatever HTTP call is required by the aggregator's API.
+
+Additionally, a <i>lookup</i> function must be implemented to determine the carrier (part of the full address) for a user, a functionality used by the <a href="">&lt;register&gt;</a> module.
+
+See your aggregator's API documentation.

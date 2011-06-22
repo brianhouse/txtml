@@ -1,0 +1,12 @@
+DESCRIPTION
+
+Movies currently playing.
+
+
+ATTRIBUTES
+
+<i>movie_1</i> - <i>a movie title</i>
+<i>movie_2</i> - <i>a movie title</i>
+<i>movie_3</i> - <i>a movie title</i>
+<i>movie_4</i> - <i>a movie title</i>
+<i>movie_5</i> - <i>a movie title</i>

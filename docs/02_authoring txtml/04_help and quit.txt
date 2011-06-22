@@ -1,0 +1,30 @@
+There a few hardcoded extradiagetic commands, which are generally required for SMS applications by carriers. Specifically, when a player sends 'help' to the system at any time, the system must reply with an appropriate help message. Likewise, 'quit' (and various synonyms) must end the application for a player.
+
+The optional help and quit attributes are parameters for a state that allow it to specify a state other than itself to handle 'help' and 'quit' messages. The user will be assigned to the appropriate 'help' or 'quit' state.
+
+This is useful because it allows a single quit-handling state to be universal for an application. However, it also lets a state handle 'help' or 'quit' messages itself if desired, allowing for the construction of cascading context specific to default behavior. The help and quit attributes can be specified in the header or in the state itself. If they are specified in the header, a collection must be specified as well. 
+
+
+For example:
+[{txtml version="1.2" collection="example" help="example:help" quit="example:quit"}
+
+	{state name="state 1"}
+		... 
+	{/state}
+
+	{state name="help"}
+		... 
+	{/state}
+
+	{state name="quit"}
+		... 
+	{/state}
+
+	{state name="state_2" help="example_2:help"}
+		... 
+	{/state}
+
+{/txtml}]
+Here, the 'help' and 'quit' states handle HELP and QUIT requests for 'state_1', however 
+'state_2' has its help requests handled by the 'help' state from the 'example_2' collection 
+(not specified here).

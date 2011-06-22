@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+<!-- VERSION -->
+
+	<xs:simpleType name="current_version">
+		<xs:restriction base="xs:decimal">
+			<xs:enumeration value="1.7" />
+			<!-- versioning applies to the whole codebase, following rational versioning policy at http://www.rubygems.org/read/chapter/7 -->
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+<!-- ELEMENT LIST -->	
+
+	<xs:group name="top">
+		<xs:choice>
+			<xs:element ref="state" />
+			<xs:element ref="block" />
+		</xs:choice>
+	</xs:group>
+	
+	<xs:group name="modules">
+		<xs:choice>
+			<xs:element ref="add" />		
+			<xs:element ref="block" />
+			<xs:element ref="characters" />
+			<xs:element ref="content" />
+			<xs:element ref="divide" />			
+			<xs:element ref="ellis" />
+			<xs:element ref="end" />	
+			<xs:element ref="filter" />
+			<xs:element ref="format" />
+			<xs:element ref="get" />
+			<xs:element ref="get-feed" />			
+			<xs:element ref="if" />
+			<xs:element ref="if-empty" />
+			<xs:element ref="if-feed" />			
+			<xs:element ref="if-input" />			
+			<xs:element ref="if-set" />		
+			<xs:element ref="include" />									
+			<xs:element ref="multiply" />
+			<xs:element ref="nothing" />	
+			<xs:element ref="pool" />
+			<xs:element ref="quit" />			
+			<xs:element ref="random" />
+			<xs:element ref="register" />	
+			<xs:element ref="return" />			
+			<xs:element ref="send" />
+			<xs:element ref="set" />
+			<xs:element ref="shuffle" />			
+			<xs:element ref="stopwatch" />
+			<xs:element ref="subtract" />
+			<xs:element ref="timestamp" />
+			<xs:element ref="txt" />
+			<xs:element ref="unset" />
+		</xs:choice>
+	</xs:group>
+	
+	<xs:group name="events">
+		<xs:choice>
+			<xs:element ref="enter" />		
+			<xs:element ref="exit" />					
+			<xs:element ref="input" />								
+			<xs:element ref="time" />
+		</xs:choice>
+	</xs:group>
+	
+	<xs:simpleType name="formats">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="abc" />
+			<xs:enumeration value="color" />			
+			<xs:enumeration value="cuss" />						
+			<xs:enumeration value="firstname" />
+			<xs:enumeration value="name" />
+			<xs:enumeration value="nicenumber" />
+			<xs:enumeration value="normal" />
+			<xs:enumeration value="number" />
+			<xs:enumeration value="lowercase" />
+			<xs:enumeration value="phonenumber" />
+			<xs:enumeration value="placename" />
+			<xs:enumeration value="uppercase" />
+			<xs:enumeration value="object" />
+		</xs:restriction>
+	</xs:simpleType>	
+
+	<xs:simpleType name="feedName">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="weathernyc" />
+			<xs:enumeration value="moon" />
+			<xs:enumeration value="yankees" />
+			<xs:enumeration value="tidesnyc" />			
+		</xs:restriction>
+	</xs:simpleType>	
+
+	
+<!-- FUNDAMENTALS -->
+
+	<xs:element name="txtml">
+		<xs:complexType>
+			<xs:choice>
+				<xs:group ref="top" minOccurs="1" maxOccurs="unbounded" />
+			</xs:choice>
+			<xs:attribute name="version" type="current_version" use="required" />			
+			<xs:attribute name="collection" type="xs:string" use="required" />			
+			<xs:attribute name="quit" type="stateName" use="optional" />
+			<xs:attribute name="help" type="stateName" use="optional" />
+			<xs:attribute name="timeout" type="xs:integer" use="optional" />
+			<xs:attribute name="prefix" type="stateName" use="optional" />			
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="state">
+		<xs:complexType>
+			<xs:choice>
+				<xs:group ref="events" minOccurs="1" maxOccurs="unbounded" />
+			</xs:choice>
+			<xs:attribute name="name" type="stateName" use="required" />
+			<xs:attribute name="start" type="xs:boolean" use="optional" />
+			<xs:attribute name="prefix" type="stateName" use="optional" />
+			<xs:attribute name="quit" type="stateName" use="optional" />
+			<xs:attribute name="help" type="stateName" use="optional" />
+			<xs:attribute name="timeout" type="xs:integer" use="optional" />			
+		</xs:complexType>
+	</xs:element>
+	
+	
+<!-- MODULE TYPES -->		
+	
+	<xs:complexType name="block" mixed="true">
+		<xs:choice>
+			<xs:group ref="modules" minOccurs="0" maxOccurs="unbounded" />
+		</xs:choice>
+	</xs:complexType>	
+		
+	<xs:complexType name="if" mixed="true">
+		<xs:complexContent>
+			<xs:extension base="block">
+				<xs:choice>
+					<xs:element ref="else" minOccurs="0" maxOccurs="1" />
+				</xs:choice>
+				<xs:attribute name="var" type="varName" use="required" />		
+			</xs:extension>
+		</xs:complexContent>	
+	</xs:complexType>
+
+	<xs:complexType name="math">
+		<xs:complexContent>
+			<xs:extension base="block">
+				<xs:attribute name="var" type="varName" use="optional" />
+				<xs:attribute name="value" type="xs:decimal" use="optional" />			
+				<xs:attribute name="float" type="xs:boolean" use="optional" />				
+			</xs:extension>
+		</xs:complexContent>	
+	</xs:complexType>
+	
+	<xs:complexType name="requestor">		
+		<xs:attribute name="state" type="stateName" use="required" />					
+	</xs:complexType>
+	
+	<xs:complexType name="statement">
+	</xs:complexType>
+		
+	
+<!-- MODULES -->	
+		
+	<xs:element name="add" type="math" />
+	
+	<xs:element name="block">
+		<xs:complexType mixed="true">
+			<xs:complexContent>
+				<xs:extension base="block">
+					<xs:attribute name="name" type="stateName" use="optional" />
+				</xs:extension>
+			</xs:complexContent>	
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="characters" type="block" />	
+		
+	<xs:element name="content">
+		<xs:complexType>
+			<xs:attribute name="string" type="gsmRestricted" use="required" />
+			<xs:attribute name="id" type="xs:integer" use="optional" />			
+		</xs:complexType>
+	</xs:element>	
+	
+	<xs:element name="divide" type="math" />	
+	
+	<xs:element name="ellis" type="requestor" />
+	
+	<xs:element name="else" type="block" />
+		
+	<xs:element name="enter" type="block"/>			
+		
+	<xs:element name="end" type="statement" />
+	
+	<xs:element name="exit" type="block" />		
+	
+	<xs:element name="filter">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="block">
+					<xs:attribute name="chars" type="xs:string" use="optional" />
+					<xs:attribute name="words" type="xs:string" use="optional" />					
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>		
+	
+	<xs:element name="format">
+		<xs:complexType mixed="true">
+			<xs:complexContent>
+				<xs:extension base="block">
+					<xs:attribute name="format" type="formats" use="optional" />						
+				</xs:extension>
+			</xs:complexContent>	
+		</xs:complexType>	
+	</xs:element>		
+	
+	<xs:element name="get">
+		<xs:complexType>
+			<xs:attribute name="var" type="varName" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="get-feed">
+		<xs:complexType>
+			<xs:attribute name="name" type="varName" use="required" />
+			<xs:attribute name="var" type="varName" use="required" />
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="if">
+		<xs:complexType mixed="true">
+			<xs:complexContent>
+				<xs:extension base="if">
+					<xs:attribute name="var2" type="varName" use="optional" />
+					<xs:attribute name="value" type="xs:string" use="optional" />								
+					<xs:attribute name="relation" type="relation" use="optional" />																		
+				</xs:extension>
+			</xs:complexContent>	
+		</xs:complexType>
+	</xs:element>	
+	
+	<xs:element name="if-empty" type="if"/>	
+
+	<xs:element name="if-feed">
+		<xs:complexType mixed="true">
+			<xs:complexContent>
+				<xs:extension base="if">
+					<xs:attribute name="name" type="varName" use="required" />
+					<xs:attribute name="var2" type="varName" use="optional" />				
+					<xs:attribute name="value" type="xs:string" use="optional" />								
+					<xs:attribute name="relation" type="relation" use="optional" />																		
+				</xs:extension>
+			</xs:complexContent>	
+		</xs:complexType>
+	</xs:element>	
+
+	<xs:element name="if-input">
+		<xs:complexType mixed="true">
+			<xs:complexContent>
+				<xs:extension base="block">
+					<xs:choice>
+						<xs:element ref="else" minOccurs="0" maxOccurs="1" />
+					</xs:choice>
+					<xs:attribute name="var" type="varName" use="optional" />		
+					<xs:attribute name="pattern" type="matchPattern" use="optional" />
+					<xs:attribute name="patternv" type="matchPattern" use="optional" />					
+					<xs:attribute name="value" type="xs:string" use="optional" />								
+					<xs:attribute name="relation" type="relation" use="optional" />	
+					<xs:attribute name="format" type="formats" use="optional" />						
+				</xs:extension>
+			</xs:complexContent>	
+		</xs:complexType>	
+	</xs:element>	
+	
+	<xs:element name="if-set" type="if" />	
+	
+	<xs:element name="include">
+		<xs:complexType>
+			<xs:attribute name="block" type="stateName" use="required" />
+		</xs:complexType>
+	</xs:element>	
+	
+	<xs:element name="input" type="block"/>	
+	
+	<xs:element name="multiply" type="math" />	
+	
+	<xs:element name="nothing" type="block" />	
+	
+	<xs:element name="pool">
+		<xs:complexType>
+			<xs:attribute name="states" type="xs:string"  use="optional" />
+			<xs:attribute name="blocks" type="xs:string"  use="optional" />			
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="quit">
+		<xs:complexType>		
+			<xs:attribute name="silent" type="xs:boolean" use="optional" />					
+		</xs:complexType>
+	</xs:element>		
+	
+	<xs:element name="random" type="block" />
+	
+	<xs:element name="return" type="statement" />
+		
+	<xs:element name="register">
+		<xs:complexType mixed="true">
+			<xs:complexContent>
+				<xs:extension base="block">
+					<xs:choice>
+						<xs:element ref="else" minOccurs="0" maxOccurs="1" />
+					</xs:choice>				
+					<xs:attribute name="state" type="stateName" use="required" />
+					<xs:attribute name="vars" type="xs:string" use="required" />					
+					<xs:anyAttribute />
+				</xs:extension>
+			</xs:complexContent>	
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="send">
+		<xs:complexType>		
+			<xs:attribute name="state" type="stateName" use="required" />					
+		</xs:complexType>
+	</xs:element>	
+
+	<xs:element name="set">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="block">
+					<xs:attribute name="var" type="varName" use="required" />
+					<xs:attribute name="value" type="xs:string" use="optional" />
+					<xs:attribute name="format" type="formats" use="optional" />	
+					<xs:attribute name="length" type="xs:integer" use="optional" />	
+					<xs:attribute name="filter" type="xs:string" use="optional" />						
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+		
+	<xs:element name="shuffle">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="block">
+					<xs:attribute name="value" type="xs:string" use="optional" />
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>	
+	
+	<xs:element name="subtract" type="math" />
+
+	<xs:element name="stopwatch" type="statement" />	
+	
+	<xs:element name="time">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="block">
+					<xs:attribute name="name" type="xs:string" use="required" />
+					<xs:attribute name="delay" type="xs:integer" use="optional" />
+					<xs:attribute name="stopwatch" type="xs:integer" use="optional" />			
+					<xs:attribute name="repeat" type="xs:boolean" use="optional" />			
+					<xs:attribute name="year" type="xs:string" use="optional" />
+					<xs:attribute name="month" type="xs:string" use="optional" />
+					<xs:attribute name="date" type="xs:string" use="optional" />
+					<xs:attribute name="day" type="xs:string" use="optional" />
+					<xs:attribute name="hour" type="xs:string" use="optional" />
+					<xs:attribute name="minute" type="xs:string" use="optional" />						
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>		
+	
+	<xs:element name="timestamp" type="statement" />	
+	
+	<xs:element name="txt">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="block">
+					<xs:attribute name="string" type="gsmRestricted" use="optional" />
+					<xs:attribute name="cost" type="xs:string" use="optional" />			
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>	
+	
+	<xs:element name="unset">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="block">
+					<xs:attribute name="var" type="varName" use="required" />
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>		
+	
+	
+<!-- VARIABLE TYPES -->
+	
+	<xs:simpleType name="stateName">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([a-z_0-9:\-])+" />
+			<xs:maxLength value="128" />			
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="varName">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([a-z_0-9])+" />
+			<xs:maxLength value="64" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="matchPattern">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([a-zA-Z_0-9!+,*?])+" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="gsmRestricted">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([a-zA-Z_0-9!@_!#%*+,-.:;=/?$)( '])+" /> <!-- important no " -->
+		</xs:restriction>
+	</xs:simpleType>	
+	
+	<xs:simpleType name="relation">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="=" />
+			<xs:enumeration value="&lt;" />
+			<xs:enumeration value="&gt;" />			
+			<xs:enumeration value="&lt;=" />
+			<xs:enumeration value="&gt;=" />	
+			<xs:enumeration value="!=" />				
+		</xs:restriction>
+	</xs:simpleType>	
+	
+	<xs:simpleType name="event">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="enter" />
+			<xs:enumeration value="exit" />
+			<xs:enumeration value="input" />		
+			<xs:enumeration value="time" />		
+		</xs:restriction>
+	</xs:simpleType>	
+	
+	
+</xs:schema>

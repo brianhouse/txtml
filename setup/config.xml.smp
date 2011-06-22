@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<settings>
+	<db>
+		<host>localhost</host>
+		<username>root</username>
+		<password></password>
+		<database>vt</database>
+		<verbose>false</verbose>
+	</db>	
+	<cron_cycle>5</cron_cycle>
+	<api>http://localhost/~house/txtml/public/api/</api>	
+</settings>

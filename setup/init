@@ -1,0 +1,9 @@
+#!
+
+touch log.log
+chmod a+w log.log
+
+cp setup/config.xml.smp config.xml
+
+chmod a+x script/choplog
+chmod a+w public/txtml/

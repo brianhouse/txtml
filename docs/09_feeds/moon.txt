@@ -1,0 +1,19 @@
+DESCRIPTION
+
+Phase of the moon.
+
+
+ATTRIBUTES
+
+<i>phase</i> -
+	new
+	waxing quarter
+	waning quarter
+	waxing half
+	waning half
+	waxing three-quarters
+	waning three-quarters
+	full
+	hidden (on error)				
+
+

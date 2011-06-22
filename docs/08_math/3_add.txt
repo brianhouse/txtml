@@ -1,0 +1,19 @@
+DESCRIPTION
+
+{add} increments a user variable by the given value.
+
+Note that if {add} is used with a variable which is a string, the <a href="?category=format&amp;topic=number"><i>number</i></a> format will be applied to the variable first. If the variable has no numeric content, this will result in a value of 0. Best practice is to use the <a href="?category=formats&amp;topic=number"><i>number</i></a> format with the <a href="?category=conditions&amp;topic=set">{set}</a> module when setting variables intended to be numeric.
+
+
+PARAMETERS
+
+<i>var</i> - which variable to operate on
+<i>value</i> - (float) the value to add	
+<i>float</i> - (true|false) whether to store decimal values. True by default. Decimals are always restricted to two places.
+
+
+EXAMPLES
+
+[...	
+	{add var="right_answers" value="1" /}		
+...]

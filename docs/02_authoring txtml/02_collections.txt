@@ -1,0 +1,29 @@
+A <i>collection</i> is a namespace for states. In any given TXTML application, there will likely be states with names like "intro" and "success". By specifying a unqiue namespace, it is much easier to avoid loading a state into the engine with a name that already exists. A collection is a prefix in front of the state name separated by a colon. A collection can be specified in two ways, in the header or as an attribute of the state element itself. A collection specified in the header applies to all states in the document if a collection is not specified in the state. For example, the following are equivalent: 
+
+[{txtml version="1.6"}
+
+	{state name="collection_a:state_1"}
+		... 
+	{/state}
+	
+{/txtml}]
+and 
+[{txtml version="1.6" collection="collection_a"}
+
+	{state name="state_1"}
+		... 
+	{/state>}
+
+{/txtml}]
+whereas in the following example, state 1 is in collection a, and state 2 is in collection b 
+[{txtml version="1.6" collection="collection_a"}
+
+	{state name="state 1"}
+		... 
+	{/state}
+
+	{state name="collection_b:state_2"}
+		... 
+	{/state}
+
+{/txtml}]

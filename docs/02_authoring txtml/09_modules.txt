@@ -1,0 +1,5 @@
+A TXTML module represents a function of the system. The module name is the XML element name, and its parameters are specified by the element's attributes. Parameters are always case-insensitive with the exception of the 'string' parameter of the {txt}, and {content} modules. A module can either be standalone or contain submodules that either influence or are influenced by its functionality. An abstract module and submodule: 
+
+[{name parameter="value"} 
+	{name parameter="value" /} 
+{/name}]

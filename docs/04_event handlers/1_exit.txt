@@ -1,0 +1,17 @@
+DESCRIPTION
+
+The {exit} handler of a user's current state is executed when the user exits the state through the <a href="?category=flow+control&amp;topic=send">{send}</a> module.
+
+
+PARAMETERS
+
+<i>none</i>
+	
+
+EXAMPLES
+
+[{state}				
+	{exit}
+		...
+	{/exit}
+{/state}]
